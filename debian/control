@@ -12,7 +12,7 @@ Rules-Requires-Root: no
 Package: multiflexi-mtr
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}, mtr-tiny
+Depends: ${misc:Depends}, ${shlibs:Depends}, mtr-tiny, multiflexi
 Description: Check your network using MultiFlexi
  MTR probes routers on the route path by limiting the number of hops
  individual packets may traverse, and listening to responses of their
