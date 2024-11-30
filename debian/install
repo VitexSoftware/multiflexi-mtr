@@ -1,0 +1,3 @@
+mtr-multiflexi /usr/bin/
+multiflexi/*.json /usr/lib/mtr/multiflexi/
+multiflexi/*.svg /usr/share/multiflexi/images/

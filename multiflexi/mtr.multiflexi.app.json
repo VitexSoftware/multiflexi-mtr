@@ -1,0 +1,34 @@
+{
+    "image": "",
+    "name": "My traceroute",
+    "description": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry. It will regularly repeat this process, usually once per second, and keep track of the response times of the hops along the path.",
+    "executable": "mtr-multiflexi",
+    "setup": "",
+    "cmdparams": "",
+    "requirements": "",
+    "deploy": "apt install mtr-tiny",
+    "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
+    "topics": "Network,Analytics,Sensor",
+    "uuid": "7492e4fe-0192-434b-b9c0-2497a360e17c",
+    "ociimage": "docker.io/vitexsoftware/mtr-multiflexi",
+    "environment": {
+        "MTR_DESTINATION": {
+            "description": "Destination IP address or hostname",
+            "type": "string",
+            "default": "one.one.one.one"
+        },
+        "RESULT_FILE": {
+            "type": "string",
+            "description": "write output json data to",
+            "defval": "mtr_report_{MTR_DESTINATION}.json",
+            "required": false
+        },
+        "ZABBIX_KEY": {
+            "type": "string",
+            "description": "Default name for Zabbix Item key name",
+            "defval": "Raiff-Balance-{MTR_DESTINATION}",
+            "required": false
+        }
+    },
+    "multiflexi": "1.7.2"
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+# This script is used to start the mtr command using the multiflexi
+
+if [[ "$1" == "--help" ]]; then
+    echo "Usage: $0 [--help]"
+    echo "Environment variables:"
+    echo "  MTR_DESTINATION  Destination to trace"
+    echo "  RESULT_FILE      File to save the mtr report"
+    exit 0
+fi
+
+if [ -n "${RESULT_FILE}" ]; then
+    mtr --report --json "${MTR_DESTINATION}" > "${RESULT_FILE}"
+else
+    mtr --report --json "${MTR_DESTINATION}"
+fi

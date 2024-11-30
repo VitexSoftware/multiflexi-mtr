@@ -1,0 +1,6 @@
+debian/multiflexi-mtr.substvars
+debian/debhelper-build-stamp
+debian/.debhelper/
+debian/multiflexi-mtr/
+debian/files
+debian/multiflexi-mtr.debhelper.log
