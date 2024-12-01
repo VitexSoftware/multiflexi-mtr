@@ -15,7 +15,7 @@
         "MTR_DESTINATION": {
             "description": "Destination IP address or hostname",
             "type": "string",
-            "default": "one.one.one.one"
+            "defval": "one.one.one.one"
         },
         "RESULT_FILE": {
             "type": "string",
