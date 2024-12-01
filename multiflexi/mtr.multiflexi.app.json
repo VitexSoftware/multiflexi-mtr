@@ -1,7 +1,7 @@
 {
     "image": "",
     "name": "My traceroute",
-    "description": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry. It will regularly repeat this process, usually once per second, and keep track of the response times of the hops along the path.",
+    "description": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry.",
     "executable": "mtr-multiflexi",
     "setup": "",
     "cmdparams": "",
