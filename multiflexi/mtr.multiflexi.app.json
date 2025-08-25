@@ -5,10 +5,10 @@
     "executable": "mtr-multiflexi",
     "setup": "",
     "cmdparams": "",
-    "requirements": "",
+    "requirements": [],
     "deploy": "apt install mtr-tiny",
     "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
-    "topics": "Network,Analytics,Sensor",
+    "topics": ["Network", "Analytics", "Sensor"],
     "uuid": "7492e4fe-0192-434b-b9c0-2497a360e17c",
     "ociimage": "docker.io/vitexsoftware/mtr-multiflexi",
     "environment": {
@@ -30,5 +30,6 @@
             "required": false
         }
     },
+    "version": "0.1.0",
     "multiflexi": "1.7.2"
 }
