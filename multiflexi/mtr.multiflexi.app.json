@@ -1,35 +1,54 @@
 {
-    "image": "",
-    "name": "My traceroute",
-    "description": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry.",
-    "executable": "mtr-multiflexi",
-    "setup": "",
-    "cmdparams": "",
-    "requirements": [],
-    "deploy": "apt install mtr-tiny",
-    "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
-    "topics": ["Network", "Analytics", "Sensor"],
+    "$schema": "https://raw.githubusercontent.com/VitexSoftware/php-vitexsoftware-multiflexi-core/refs/heads/main/multiflexi.app.schema.json",
+    "schemaVersion": "3.0.0",
     "uuid": "7492e4fe-0192-434b-b9c0-2497a360e17c",
+    "name": {
+        "en": "My traceroute",
+        "cs": "My traceroute"
+    },
+    "description": {
+        "en": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry.",
+        "cs": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry."
+    },
+    "version": "0.1.0",
+    "tags": [
+        "Network",
+        "Analytics",
+        "Sensor"
+    ],
+    "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
+    "image": "",
     "ociimage": "docker.io/vitexsoftware/mtr-multiflexi",
+    "executable": "mtr-multiflexi",
     "environment": {
         "MTR_DESTINATION": {
-            "description": "Destination IP address or hostname",
+            "description": {
+                "en": "Destination IP address or hostname",
+                "cs": "Destination IP address or hostname"
+            },
             "type": "string",
-            "defval": "one.one.one.one"
+            "defval": "one.one.one.one",
+            "category": "Other"
         },
         "RESULT_FILE": {
             "type": "string",
-            "description": "write output json data to",
+            "description": {
+                "en": "write output json data to",
+                "cs": "write output json data to"
+            },
             "defval": "mtr_report_{MTR_DESTINATION}.json",
-            "required": false
+            "required": false,
+            "category": "Other"
         },
         "ZABBIX_KEY": {
             "type": "string",
-            "description": "Default name for Zabbix Item key name",
+            "description": {
+                "en": "Default name for Zabbix Item key name",
+                "cs": "Default name for Zabbix Item key name"
+            },
             "defval": "TraceRoute-{MTR_DESTINATION}",
-            "required": false
+            "required": false,
+            "category": "Other"
         }
-    },
-    "version": "0.1.0",
-    "multiflexi": "1.7.2"
+    }
 }
