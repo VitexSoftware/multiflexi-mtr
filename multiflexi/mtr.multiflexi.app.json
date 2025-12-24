@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/VitexSoftware/php-vitexsoftware-multiflexi-core/refs/heads/main/multiflexi.app.schema.json",
     "image": "",
     "name": "My traceroute",
     "description": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry.",
