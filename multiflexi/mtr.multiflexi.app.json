@@ -1,54 +1,51 @@
 {
-    "$schema": "https://raw.githubusercontent.com/VitexSoftware/php-vitexsoftware-multiflexi-core/refs/heads/main/multiflexi.app.schema.json",
-    "schemaVersion": "3.0.0",
-    "uuid": "7492e4fe-0192-434b-b9c0-2497a360e17c",
-    "name": {
-        "en": "My traceroute",
-        "cs": "My traceroute"
+  "$schema": "https://raw.githubusercontent.com/VitexSoftware/php-vitexsoftware-multiflexi-core/refs/heads/main/multiflexi.app.schema.json",
+  "schemaVersion": "3.2.1",
+  "uuid": "7492e4fe-0192-434b-b9c0-2497a360e17c",
+  "name": {
+    "en": "My traceroute",
+    "cs": "My traceroute"
+  },
+  "description": {
+    "en": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry.",
+    "cs": "MTR zkoumá směrovače na cestě trasy omezením počtu přeskoků, které mohou jednotlivé pakety projít, a nasloucháním odpovědím na jejich vypršení."
+  },
+  "version": "0.1.0",
+  "tags": ["Network", "Analytics", "Sensor"],
+  "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
+  "image": "",
+  "ociimage": "docker.io/vitexsoftware/mtr-multiflexi",
+  "executable": "mtr-multiflexi",
+  "environment": {
+    "MTR_DESTINATION": {
+      "description": {
+        "en": "Destination IP address or hostname",
+        "cs": "Cílová IP adresa nebo název hostitele"
+      },
+      "type": "string",
+      "defval": "one.one.one.one",
+      "category": "Other",
+      "required": false
     },
-    "description": {
-        "en": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry.",
-        "cs": "MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry."
+    "RESULT_FILE": {
+      "type": "string",
+      "description": {
+        "en": "write output json data to",
+        "cs": "zapsat výstupní json data do"
+      },
+      "defval": "mtr_report_{MTR_DESTINATION}.json",
+      "required": false,
+      "category": "Other"
     },
-    "version": "0.1.0",
-    "tags": [
-        "Network",
-        "Analytics",
-        "Sensor"
-    ],
-    "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
-    "image": "",
-    "ociimage": "docker.io/vitexsoftware/mtr-multiflexi",
-    "executable": "mtr-multiflexi",
-    "environment": {
-        "MTR_DESTINATION": {
-            "description": {
-                "en": "Destination IP address or hostname",
-                "cs": "Destination IP address or hostname"
-            },
-            "type": "string",
-            "defval": "one.one.one.one",
-            "category": "Other"
-        },
-        "RESULT_FILE": {
-            "type": "string",
-            "description": {
-                "en": "write output json data to",
-                "cs": "write output json data to"
-            },
-            "defval": "mtr_report_{MTR_DESTINATION}.json",
-            "required": false,
-            "category": "Other"
-        },
-        "ZABBIX_KEY": {
-            "type": "string",
-            "description": {
-                "en": "Default name for Zabbix Item key name",
-                "cs": "Default name for Zabbix Item key name"
-            },
-            "defval": "TraceRoute-{MTR_DESTINATION}",
-            "required": false,
-            "category": "Other"
-        }
+    "ZABBIX_KEY": {
+      "type": "string",
+      "description": {
+        "en": "Default name for Zabbix Item key name",
+        "cs": "Výchozí název pro klíč položky Zabbix"
+      },
+      "defval": "TraceRoute-{MTR_DESTINATION}",
+      "required": false,
+      "category": "Other"
     }
+  }
 }
