@@ -1,8 +1,21 @@
 #!/bin/sh
 set -e
 
+. /usr/share/debconf/confmodule
+
 case "$1" in
     remove|upgrade|deconfigure)
+
+
+
+APPLICATION=`echo $DPKG_MAINTSCRIPT_PACKAGE | sed 's/multiflexi-//'`
+for file in `ls /usr/lib/$APPLICATION/multiflexi/*.json`
+do
+	multiflexi-cli application:remove-json --file $file
+done
+
+
+
     ;;
 
     failed-upgrade)
