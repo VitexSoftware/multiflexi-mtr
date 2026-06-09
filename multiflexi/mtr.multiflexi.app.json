@@ -10,12 +10,23 @@
     "cs": "MTR zkoumá směrovače na cestě trasy omezením počtu přeskoků, které mohou jednotlivé pakety projít, a nasloucháním odpovědím na jejich vypršení."
   },
   "executable": "mtr-multiflexi",
+  "events": {
+    "emits": {
+      "metrics.collected": {
+        "description": "Monitoring metrics were collected"
+      }
+    }
+  },
   "setup": "",
   "cmdparams": "",
   "requirements": [],
   "deploy": "apt install mtr-tiny",
   "homepage": "https://github.com/VitexSoftware/multiflexi-mtr",
-  "topics": ["Network", "Analytics", "Sensor"],
+  "topics": [
+    "Network",
+    "Analytics",
+    "Sensor"
+  ],
   "uuid": "7492e4fe-0192-434b-b9c0-2497a360e17c",
   "ociimage": "docker.io/vitexsoftware/mtr-multiflexi",
   "environment": {
@@ -61,5 +72,6 @@
     "category": "Other"
   },
   "version": "0.1.0",
-  "multiflexi": "1.7.2"
+  "multiflexi": "1.7.2",
+  "schemaVersion": "3.4.0"
 }
