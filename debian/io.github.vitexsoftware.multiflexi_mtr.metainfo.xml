@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop-application">
-  <id>cz.vitexsoftware.multiflexi_mtr</id>
+<component type="console-application">
+  <id>io.github.vitexsoftware.multiflexi_mtr</id>
   <metadata_license>MIT</metadata_license>
   <project_license>MIT</project_license>
   <name>multiflexi-mtr</name>
+  <icon type="stock">multiflexi-mtr</icon>
   <summary>Check your network using MultiFlexi</summary>
   <description>
     <p>
       MTR probes routers on the route path by limiting the number of hops individual packets may traverse, and listening to responses of their expiry. It will regularly repeat this process, usually once per second, and keep track of the response times of the hops along the path.
     </p>
   </description>
+  <provides>
+    <binary>mtr-multiflexi</binary>
+  </provides>
   <categories>
-    <category>Utility</category>
+    <category>Network</category>
   </categories>
   <url type="homepage">https://github.com/VitexSoftware/multiflexi-mtr</url>
   <url type="bugtracker">https://github.com/VitexSoftware/multiflexi-mtr/issues</url>

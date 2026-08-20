@@ -1,3 +1,5 @@
 mtr-multiflexi /usr/bin/
 multiflexi/*.json /usr/lib/mtr/multiflexi/
 multiflexi/*.svg /usr/share/multiflexi/images/
+multiflexi-mtr.svg usr/share/icons/hicolor/scalable/apps
+debian/io.github.vitexsoftware.multiflexi_mtr.metainfo.xml usr/share/metainfo/
